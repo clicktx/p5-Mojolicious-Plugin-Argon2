@@ -47,6 +47,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Crypt::Argon2" : "0.002",
             "Mojolicious" : "7.10"
          }
       }
