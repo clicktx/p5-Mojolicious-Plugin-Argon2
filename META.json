@@ -53,6 +53,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/clicktx/p5-Mojolicious-Plugin-Argon2/issues"
+      },
+      "homepage" : "https://github.com/clicktx/p5-Mojolicious-Plugin-Argon2",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/clicktx/p5-Mojolicious-Plugin-Argon2.git",
+         "web" : "https://github.com/clicktx/p5-Mojolicious-Plugin-Argon2"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:CLICKTX",
    "x_serialization_backend" : "JSON::PP version 2.27400"
