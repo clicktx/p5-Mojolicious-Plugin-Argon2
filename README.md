@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/clicktx/p5-Mojolicious-Plugin-Argon2.svg?branch=master)](https://travis-ci.org/clicktx/p5-Mojolicious-Plugin-Argon2)
 # NAME
 
 Mojolicious::Plugin::Argon2 - Mojolicious Plugin
