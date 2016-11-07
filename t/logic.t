@@ -25,17 +25,17 @@ get '/verify' => sub {
 };
 
 my $t    = Test::Mojo->new();
-my @data = <DATA>;
-
-for (@data) {
-    chomp;
-    my ( $encoded, $password, $salt ) = split / /;
-
-    $t->get_ok("/crypt?p=$password&s=$salt")->status_is(200)
-      ->content_is($encoded);
-    $t->get_ok("/verify?e=$encoded&p=$password")->status_is(200)
-      ->content_is('Pass');
-}
+# my @data = <DATA>;
+# 
+# for (@data) {
+#     chomp;
+#     my ( $encoded, $password, $salt ) = split / /;
+# 
+#     $t->get_ok("/crypt?p=$password&s=$salt")->status_is(200)
+#       ->content_is($encoded);
+#     $t->get_ok("/verify?e=$encoded&p=$password")->status_is(200)
+#       ->content_is('Pass');
+# }
 
 my $password = 'my_secret_password';
 my $salt     = 'my_salt_is_salt';
