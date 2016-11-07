@@ -4,7 +4,7 @@
       "Munenori Sugimura <clicktx@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.0.4, CPAN::Meta::Converter version 2.150010",
+   "generated_by" : "Minilla/v3.0.4, CPAN::Meta::Converter version 2.143240",
    "license" : [
       "unknown"
    ],
@@ -50,6 +50,11 @@
             "Crypt::Argon2" : "0.002",
             "Mojolicious" : "7.10"
          }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0"
+         }
       }
    },
    "release_status" : "unstable",
@@ -65,6 +70,5 @@
       }
    },
    "version" : "0.01",
-   "x_authority" : "cpan:CLICKTX",
-   "x_serialization_backend" : "JSON::PP version 2.27400"
+   "x_authority" : "cpan:CLICKTX"
 }
