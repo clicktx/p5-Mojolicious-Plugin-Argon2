@@ -24,8 +24,9 @@ get '/verify' => sub {
     $c->render( text => ( $ok ? 'Pass' : 'Fail' ) );
 };
 
+my $t    = Test::Mojo->new();
 my @data = <DATA>;
-my $t    = Test::Mojo->new;
+
 for (@data) {
     chomp;
     my ( $encoded, $password, $salt ) = split / /;
