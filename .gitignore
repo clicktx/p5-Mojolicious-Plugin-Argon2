@@ -8,3 +8,4 @@
 !LICENSE
 local/
 cpanfile.snapshot
+.perl-version
