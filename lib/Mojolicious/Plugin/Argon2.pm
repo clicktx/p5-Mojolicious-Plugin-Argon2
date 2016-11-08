@@ -16,8 +16,9 @@ sub register {
             my $c = shift;
             my ( $secret, $salt ) = ( shift, shift || _salt() );
 
-            return argon2i_pass( $secret, $salt, $t_cost, $m_factor,
-                $parallelism, $tag_size );
+            # return argon2i_pass( $secret, $salt, $t_cost, $m_factor,
+            #     $parallelism, $tag_size );
+            return 'aabbcc';
         }
     );
 

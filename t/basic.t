@@ -9,7 +9,7 @@ plugin 'Argon2';
 get '/' => sub {
     my $c = shift;
     my $encoded = $c->argon2( 'password', 'somesalt' );
-    say $encoded;
+    say "Yaaa!!!: " . $encoded;
     $c->render( text => 'Hello Mojo!' );
 };
 
