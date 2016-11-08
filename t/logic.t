@@ -31,10 +31,8 @@ for (@data) {
     chomp;
     my ( $encoded, $password, $salt ) = split / /;
 
-    $t->get_ok("/crypt?p=$password&s=$salt")->status_is(200)
-      ->content_is($encoded);
-    $t->get_ok("/verify?e=$encoded&p=$password")->status_is(200)
-      ->content_is('Pass');
+    $t->get_ok("/crypt?p=$password&s=$salt")->status_is(200)->content_is($encoded);
+    $t->get_ok("/verify?e=$encoded&p=$password")->status_is(200)->content_is('Pass');
 }
 
 my $password = 'my_secret_password';
@@ -46,8 +44,6 @@ ok !app->argon2_verify( $encoded, 'bad_password' ), 'deny ok';
 
 my $encoded2 = app->argon2( $password, $salt );
 is $encoded, $encoded2, 'recrypt ok';
-
-say `perl -v`;
 
 done_testing();
 

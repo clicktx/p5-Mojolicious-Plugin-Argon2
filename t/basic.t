@@ -7,8 +7,10 @@ use Test::Mojo;
 plugin 'Argon2';
 
 get '/' => sub {
-  my $c = shift;
-  $c->render(text => 'Hello Mojo!');
+    my $c = shift;
+    my $encoded = $c->argon2( 'password', 'somesalt' );
+    say $encoded;
+    $c->render( text => 'Hello Mojo!' );
 };
 
 my $t = Test::Mojo->new;
