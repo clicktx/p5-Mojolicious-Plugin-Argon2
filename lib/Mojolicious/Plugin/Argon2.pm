@@ -18,7 +18,8 @@ sub register {
 
             # return argon2i_pass( $secret, $salt, $t_cost, $m_factor,
             #     $parallelism, $tag_size );
-            return "salt: " . $salt;
+            # return "salt: " . $salt;
+            argon2i_pass( $secret, $salt, $t_cost, $m_factor, $parallelism, $tag_size );
         }
     );
 
