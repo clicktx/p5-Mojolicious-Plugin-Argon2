@@ -20,7 +20,10 @@ my $parallelism = 1;
 my $tag_size    = 16;
 my $secret      = 'password';
 my $salt        = 'saltSalt';
-ok argon2i_pass( $secret, $salt, $t_cost, $m_factor, $parallelism, $tag_size );
+
+my $res;
+eval { $res = argon2i_pass( $secret, $salt, $t_cost, $m_factor, $parallelism, $tag_size ) };
+ok $res;
 
 # my $t = Test::Mojo->new;
 # $t->get_ok('/')->status_is(200)->content_is('Hello Mojo!');
