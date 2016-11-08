@@ -14,15 +14,15 @@ get '/' => sub {
 };
 
 use Crypt::Argon2 qw/argon2i_pass argon2i_verify/;
-my $t_cost      = 3;
-my $m_factor    = '32M';
+my $t_cost      = 2;
+my $m_factor    = '16M';
 my $parallelism = 1;
 my $tag_size    = 16;
 my $secret      = 'password';
 my $salt        = 'saltSalt';
-say argon2i_pass( $secret, $salt, $t_cost, $m_factor, $parallelism, $tag_size );
+ok argon2i_pass( $secret, $salt, $t_cost, $m_factor, $parallelism, $tag_size );
 
-my $t = Test::Mojo->new;
-$t->get_ok('/')->status_is(200)->content_is('Hello Mojo!');
+# my $t = Test::Mojo->new;
+# $t->get_ok('/')->status_is(200)->content_is('Hello Mojo!');
 
 done_testing();
