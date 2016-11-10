@@ -11,8 +11,10 @@ cache:
     directories:
         - local
 before_install:
+    - sudo apt-get update -q
     - cpanm Carton
     - cpanm --test-only Crypt::Argon2
+    - "cat ~/.cpanm/build.log"
 install:
     - carton install
 script:
