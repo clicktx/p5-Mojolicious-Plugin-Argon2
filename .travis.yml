@@ -11,9 +11,9 @@ cache:
     directories:
         - local
 before_install:
+    - cpanm -v --installdeps --notest .
     - cpanm Carton
-    - cpanm ExtUtils::Install
-    - cpanm --test-only -v Crypt::Argon2
+    - cpanm --test-only -v  Crypt::Argon2
     - "cat ~/.cpanm/build.log"
 install:
     - carton install
