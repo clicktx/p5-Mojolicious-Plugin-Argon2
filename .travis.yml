@@ -13,3 +13,5 @@ install:
     - carton install
 script:
     - carton exec -- prove -lrv t
+after_failure:
+    - "cat ~/.cpanm/build.log"

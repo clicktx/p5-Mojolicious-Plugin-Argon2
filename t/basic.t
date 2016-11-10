@@ -13,6 +13,7 @@ say "test start";
 
 my $res;
 eval { $res = argon2i_pass( $secret, $salt, $t_cost, $m_factor, $parallelism, $tag_size ) };
+say $res;
 ok $res;
 
 say "test done";
