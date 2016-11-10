@@ -12,7 +12,7 @@ cache:
         - local
 before_install:
     - cpanm Carton
-    - cpanm --test-only Crypt::Argon2
+    - cpanm --test-only -v Crypt::Argon2
     - "cat ~/.cpanm/build.log"
 install:
     - carton install
