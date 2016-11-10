@@ -11,9 +11,8 @@ cache:
     directories:
         - local
 before_install:
-    - cpanm -v --installdeps --notest .
     - cpanm Carton
-    - cpanm --test-only -v  Crypt::Argon2
+    - cpanm --force -v Crypt::Argon2
     - "cat ~/.cpanm/build.log"
 install:
     - carton install
