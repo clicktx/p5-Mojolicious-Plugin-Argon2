@@ -9,7 +9,7 @@ cache:
         - local
 before_install:
     - cpanm Carton
-    - cpanm --test-onry Crypt::Argon2
+    - cpanm --test-only Crypt::Argon2
 install:
     - carton install
 script:
